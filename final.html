@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <title>Jump</title>
+
+  <style>
+
+    #canvas {
+        width: 300px;
+        height: 600px;
+        border: 1px solid red;
+    }
+
+  </style>
+
+</head>
+<body>
+
+    <canvas id="canvas" width="300" height="600"></canvas>
+
+   
+</body>
+
+    <script>
+
+        function main() {
+            const canvas = document.querySelector("#glCanvas");
+            //Initialize the GL context
+            const gl = canvas.getContext("webgl");
+            if (!gl) {
+                alert("Unable to initialize WebGl. Your brower ro rmachine may not support it");
+                return;
+            }
+
+            //set color to black, fully opaque
+            gl.clearColor(0.0, 0.0, 0.0, 1.0);
+            // Clear the color buffer with specified clear color
+            gl.clear(gl.COLOR_BUFFER_BIT);
+        }
+
+    </script>
+
+
+</html>
